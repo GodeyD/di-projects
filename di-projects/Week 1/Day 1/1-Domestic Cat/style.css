@@ -1,0 +1,46 @@
+#left-area article {
+    padding-left: 20% !important;
+    padding-right: 20% !important;
+    color: #454545;
+    background-color: blanchedalmond;
+}
+
+.entry {
+    margin-bottom: 60px;
+    background-color: #fff;
+    box-shadow: 0 1px 2px rgb(0 0 0 / 10%);
+    padding: 38px 33px 38px 40px;
+}
+
+article, aside, footer, header, nav, section {
+    display: block;
+}
+
+div {
+    font-size: 100%;
+}
+
+.container {
+    text-align: left;
+}
+
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    font-weight: 300;
+    line-height: 1;    
+}
+
+img[Attributes Style] {
+    width: 623px;
+    height: 200px;
+}
+
+.entry-thumbnail {
+    border-style: solid;
+
+}
+
+#cats {
+    width: 60%;
+    background-color: #fff !important;
+}

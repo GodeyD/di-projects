@@ -1,29 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url(https://wonderfulengineering.com/wp-content/uploads/2016/02/iron-man-wallpaper-22.jpg);
+    background-repeat: no-repeat;
+
+}
 nav {
     background-color: black;
     color: white;
     height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 a {
     color: white;
     text-decoration: none;
     font-size: 30px;
-    margin: 50px;
+    margin: 30px;
     
 }
 
-.topnav {
-    text-align: right;
-    justify-content: right;
+.topnav {   
     padding: auto;
-    
+    display: flex;
+    justify-content: center;    
 }
 
-.pad    {
-    padding-top: 10px;
-}
-
-.topnav > img {
-    text-align: left !important;
-    
+.bio {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    width: 40%;
+    padding: 20px;
 }

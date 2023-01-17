@@ -6,6 +6,7 @@
 body {
     background-image: url(https://wonderfulengineering.com/wp-content/uploads/2016/02/iron-man-wallpaper-22.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 
 }
 nav {
@@ -38,3 +39,7 @@ a {
     width: 40%;
     padding: 20px;
 }
+
+h1 {
+    font-size: 100px;
+}  

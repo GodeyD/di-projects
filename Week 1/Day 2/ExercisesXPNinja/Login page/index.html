@@ -1,33 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Loguin page</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/92e6ad3d50.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Courgette&family=Plus+Jakarta+Sans:wght@200&family=Press+Start+2P&family=Roboto+Serif:opsz@8..144&family=Satisfy&family=Yeseva+One&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="container">
         <div id="cover">
-            <h1 class="Sign-up">Hello Friend!</h1>
-            <p class="sign-up">Enter your personal details</p>
-            <a class="button sing-up" href="#cover">Sign Up</a>
+            <h1 class="sign-up"><i class="fa-solid fa-user-plus"></i><br>Hello Friend!</h1>
+            <p class="sign-up">Enter your personal details<br>and start journey with us</p>
+            <a class="button sing-up" href="#cover">Sign Up<i class="fa-solid fa-circle-arrow-right"></i></a>
             <h1 class="sign-in">Welcome Back!</h1>
-            <p class="sign-in">To keep connect with us please<br>login with your personal info</p><br>
-            <a class="button sub sign-in" href="#"></a>
-
+            <p class="sign-in">To keep connected with us please<br>login with your personal info</p><br>
+            <a class="button sub sign-in" href="#">Sign In</a>
+            
         </div>
-
+        
         <div class="login">
             <h1>Sign In</h1>
-            <span class="social-login"><i class="fa-brands fa-facebook-f"></i></span>  
-            <span class="social-login"><i class="fa-brands fa-square-instagram"></i></span>
-            <span class="social-login"><i class="fa-brands fa-github"></i></span>
-            <span class="social-login"><i class="fa-brands fa-linkedin-in"></i></span>
+            <a href="https://www.facebook.com/diego.ripari/" target="_blank"><span class="social-login"><i class="fa-brands fa-facebook-f"></i></span></a>
+            <a href="https://www.instagram.com/riparidiego/" target="_blank"><span class="social-login"><i class="fa-brands fa-square-instagram"></i></span></a>
+            <a href="https://github.com/GodeyD" target="_blank"><span class="social-login"><i class="fa-brands fa-github"></i></span></a>
+            <a href="https://www.linkedin.com/in/diegoripari/" target="_blank"><span class="social-login"><i class="fa-brands fa-linkedin-in"></i></span></a>
+            <p>or use your email account</p>
+            <form method="post">
+                <input type="email" placeholder="Email" class="input-field"><br>
+                <input type="password" placeholder="Password" class="input-field"><br>
+                <a id="forgot-pass" href="#">Forgot your password</a><br>
+                <input type="submit" type="submit" value="Sign in" class="submit-btn">
+            </form>
         </div>
 
+        <div class="register">
+            <h1>Create Account</h1>
+            <a href="https://www.facebook.com/diego.ripari/" target="_blank"><span class="social-login"><i class="fa-brands fa-facebook-f"></i></span></a>
+            <a href="https://www.instagram.com/riparidiego/" target="_blank"><span class="social-login"><i class="fa-brands fa-square-instagram"></i></span></a>
+            <a href="https://github.com/GodeyD" target="_blank"><span class="social-login"><i class="fa-brands fa-github"></i></span></a>
+            <a href="https://www.linkedin.com/in/diegoripari/" target="_blank"><span class="social-login"><i class="fa-brands fa-linkedin-in"></i></span></a>
+            <p>or use your email for registration</p>
+            <form method="post">
+                <input type="text" placeholder="Name" class="input-field"><br>
+                <input type="email" placeholder="Email" class="input-field"><br>
+                <input type="password" placeholder="Password" class="input-field"><br>                
+                <input class="submit-btn" type="submit" value="Sign up"> 
+            </form>
+        </div>
+        
     </div>
 </body>
 </html>

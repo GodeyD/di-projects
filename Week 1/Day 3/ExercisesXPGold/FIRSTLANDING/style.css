@@ -39,6 +39,7 @@ body {
     margin-top: 6%;
     display: flex;
     justify-content: space-around;
+    margin-bottom: 20%;
     
 }
 .card {
@@ -73,7 +74,7 @@ body {
         white 100%);
 }
 .card p {
-    padding: 1em;
+    padding: 2.5%;
     
 }
 .card img {
@@ -93,4 +94,47 @@ body {
     padding-top: 0.5em;
 }
 
- 
+@media all and (min-width: 1024px) and (max-width: 1280px) { }
+
+@media all and (min-width: 768px) and (max-width: 1024px) { }
+
+@media all and (min-width: 480px) and (max-width: 768px) {
+    
+}
+
+@media all and (max-width: 480px) {
+    #container {
+        width: 480px;
+        justify-content: center;
+        
+    }
+    .cards {            
+        margin-top: 6%;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+          
+
+    } 
+    .card {
+        margin-top: 40px;
+        margin-left: 40%;
+        height: 100%;
+    }
+    .card2 {        
+        margin-bottom: 0px
+    }
+    .card-bottom h3 {
+        padding-top: 0px;
+        padding-bottom: 10px;
+    }
+    .card1 {
+        padding-bottom: 60px;
+    }
+    .card2 {
+        padding-bottom: 60px;          
+    }
+    .card3 {
+        padding-bottom: 60px;
+    }
+}

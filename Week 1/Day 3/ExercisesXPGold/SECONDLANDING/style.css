@@ -1,0 +1,18 @@
+* {
+    padding: 0;
+    margin: 0;
+    
+}
+.navbar {
+    background-color: #32676D !important;
+    padding: 20px;
+} 
+
+form h3 {
+    color: white;
+    text-transform: uppercase;    
+}
+.btn {
+    background-color: #00A1D8 !important;
+    margin-left: 10px;
+}

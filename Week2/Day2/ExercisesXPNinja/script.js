@@ -21,3 +21,20 @@ if (zipCode2.match(/\b\d{5}\b/g)) {console.log("success")} else {console.log("er
 let var1 = prompt("put a word", "word")
 const noVowels = var1.replace(/[aeiou]/gi, '');
 console.log(noVowels)
+
+// Bonus: Replace the vowels with another character and console.log the result
+let var2 = prompt("put a word", "word")
+const regA = (/a{1,}/g)
+const regE = (/e{1,}/g)
+const regI = (/i{1,}/g)
+const regO = (/o{1,}/g)
+const regU = (/u{1,}/g)
+
+
+newString = var2.replace(regA, "1") 
+newString1 = newString.replace(regE, "2")
+newString2 = newString1.replace(regI, "3")
+newString3 = newString2.replace(regO, "4")
+newString4 = newString3.replace(regU, "5")
+
+console.log(newString4);

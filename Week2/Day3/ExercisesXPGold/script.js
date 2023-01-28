@@ -22,3 +22,18 @@ let guestList = {
   }
 
 //   Exercise 3 : Playing With Numbers
+let age = [20,5,12,43,98,55]
+
+sum = 0
+
+for (let i=0;i<age.length;i++) {  
+  sum = sum + age[i]
+}
+console.log(sum)
+
+let oldest = age[0]
+
+for (var i = 1; i < age.length; i++) {
+  if (age[i] > oldest) oldest = age[i];
+}
+console.log(oldest)

@@ -109,6 +109,7 @@ function retrieveValue2(evt) {
     secondForm[1].defaultValue = `${volume(valueInput)}`   
 }
 
+//Exercise 5 : Event Listeners
 document.querySelectorAll("p")[4].onmouseout = function() {
     const h1Rand = document.querySelectorAll("p")[4]
     h1Rand.style.fontSize = `${Math.random(400) * (100 - 20) + 20}px`

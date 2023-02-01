@@ -64,15 +64,39 @@ function myMove() {
 let boxDrag = document.getElementById("box")
 boxDrag.setAttribute('draggable', 'true');
 
-boxDrag.addEventListener("dragstart", function(event) {
-    event.target.style.backgroundColor = "lightpink";    
+boxDrag.addEventListener("dragstart", function(event) {    
+    event.target.style.backgroundColor = "lightpink";  
+    event.dataTransfer.setData("text/plain", event.target.id)  
   });
   
-  boxDrag.addEventListener("dragend", function(event) {
-      event.target.style.backgroundColor = "lightgreen";
-      let _x = event.clientX;
-      let _y = event.clientY;      
-      event.target.style.left = _x + "px";
-      event.target.style.top = _y + "px";
-      event.target.style.position = "absolute";      
-    });
+  function retrieveZonesAndAddEvents () {
+    const allZones = document.getElementById("target");
+    // Give to each dropzone an event listener; loop    
+        allZones.addEventListener("dragover", overTarget);
+        allZones.addEventListener("drop", dropOnTarget);    
+}
+
+retrieveZonesAndAddEvents()
+
+function overTarget (evt) {
+    evt.preventDefault(); //necessary
+    evt.target.classList.add("overDrop");
+}
+function dropOnTarget (evt) {
+    evt.preventDefault();  //necessary
+    evt.target.classList.add("droppedTarget");
+    const data = evt.dataTransfer.getData("text/plain"); //id of the element
+    // console.log(data);
+    const elem = document.getElementById(data);
+    evt.target.appendChild(elem);
+}
+//   boxDrag.addEventListener("dragend", function(event) {
+//       event.target.style.backgroundColor = "lightgreen";
+//       let _x = event.clientX;
+//       let _y = event.clientY;      
+//       event.target.style.left = _x + "px";
+//       event.target.style.top = _y + "px";
+//       event.target.style.position = "absolute";      
+//     });
+
+

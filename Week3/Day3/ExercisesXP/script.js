@@ -88,7 +88,7 @@ function dropOnTarget (evt) {
     const data = evt.dataTransfer.getData("text/plain"); //id of the element
     // console.log(data);
     const elem = document.getElementById(data);
-    evt.target.appendChild(elem);
+    evt.target.appendChild(elem);  
 }
 //   boxDrag.addEventListener("dragend", function(event) {
 //       event.target.style.backgroundColor = "lightgreen";

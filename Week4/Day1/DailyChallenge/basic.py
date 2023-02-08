@@ -22,3 +22,4 @@ import random
 user_list = list(user)
 random.shuffle(user_list)
 print(''.join(user_list))
+

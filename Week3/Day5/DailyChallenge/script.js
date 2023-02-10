@@ -48,4 +48,3 @@ function addTask(evt) {
   }
   }
 
-{/* <i class="fa-solid fa-square-xmark"></i> */}

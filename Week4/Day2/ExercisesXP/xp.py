@@ -95,4 +95,24 @@ for name in names:
     if teen_age >= 16 and teen_age <= 21:
         names.remove(name)
 
-print(names)        
+print(names)   
+
+# Exercise 10 : Sandwich Orders
+sandwich_orders = ["Tuna sandwich", "Avocado sandwich", "Egg sandwich", "Sabih sandwich", "Pastrami sandwich"]
+finished_sandwiches = []
+list_number = 0
+for sandwich in sandwich_orders:
+    list_number += 1
+    sandwich_orders.remove(sandwich)
+    finished_sandwiches.append(sandwich)
+    print(f'{list_number}.- I made your {sandwich}')
+
+# Exercise 11 : Sandwich Orders#2
+sandwich_orders = ["Tuna sandwich", "Avocado sandwich", "Pastrami sandwich", "Egg sandwich", "Pastrami sandwich", "Sabih sandwich", "Pastrami sandwich"]
+print('deli has run out of pastrami')
+
+pastrami = "Pastrami sandwich"
+while pastrami in sandwich_orders:
+    sandwich_orders.remove("Pastrami sandwich")
+    
+print(sandwich_orders)

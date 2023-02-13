@@ -1,36 +1,32 @@
-# # Challenge 1
-# user_number: int = int(input("Your number: "))
-# user_length: int = int(input("Your length: "))
 
-# result = []
+matrix = ([ 
+   [7,'i',3],
+    ['T','s','i'],
+    ['h','%','x'],
+    ['i','#'],
+    ['s','M'], 
+    ['$','a'], 
+    ['#','t','%'],
+    ['^','r','!'],
+        ])
 
-# for multipler in range(1, user_length + 1):
-#     result.append(user_number * multipler)
+array = matrix[2][1].isalpha()
+idx = 0
+secret_message: str = str('')
 
-# print(result)
+def indexx(lis):
+  if len(lis) == 3:
+    return idx
+  elif len(lis) == 2 and idx == 0 or len(lis) == 2 and idx == 1:
+    return idx
+  else:
+    lis += [0]
+    return idx
+for n in range(3):
+  for lis in matrix:  
+    if str(lis[indexx(lis)]).isalpha() == True:    
+      secret_message += str(lis[indexx(lis)])
+  idx += 1
+  
 
-# # Challenge 2
-# in_str: str = "bbbbbooommmbbbbbooonnn"
-
-# result_str = in_str[0]
-
-# for char in in_str[1:]:
-#     if result_str[-1] != char:
-#         result_str += char
-
-# print(result_str)        
-
-sample_dict = {
-  "name": "Kelly",
-  "age":25,
-  "salary": 8000,
-  "city": "New york"
-
-}
-keys_to_remove = ["name", "salary"]
-
-for key in keys_to_remove:
-    sample_dict.pop(key, None)
-   
-
-print(sample_dict)
+print(secret_message)

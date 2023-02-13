@@ -1,32 +1,70 @@
-# Exercise 1 : What Are You Learning ?
-def display_message():
-    print('I am learning phyton')
-
-display_message()
-
-# 🌟 Exercise 2: What’s Your Favorite Book ?
-def favorite_book(title):
-    print(f'One of my favorite books is {title}')
-
-favorite_book('Dune')
+choices = [0, 1, 2, 3, 4, 5, 6, 7, 8]
 
 
-# 🌟 Exercise 3 : Some Geography
-def describe_city(cty, ctry ='Argentina' ):
-    print(f'{cty} is in {ctry}')
+def display_board(choices) -> None:
+    board_gui = f"""
+    #############
+    # {choices[0]} # {choices[1]} # {choices[2]} #
+    #############
+    # {choices[3]} # {choices[4]} # {choices[5]} #
+    #############
+    # {choices[6]} # {choices[7]} # {choices[8]} #
+    #############
+    """
+    print(board_gui)
 
-describe_city('bsas')    
 
-# Exercise 4 : Random
-import random
 
-def rand(num):
-    r = random.randint(1,100)
-    if r == num : print('Success')
-    else : print(f'fail! your num is {num} and the pc num is {r}')
+def switch_players(player: str) -> str:
+    if player == 'X':
+        return 'O'
+    else:
+        return 'X'
 
-rand(10)    
+display_board(choices)
 
-# 🌟 Exercise 5 : Let’s Create Some Personalized Shirts !
-def make_shirt(size, text):
-    print(f'The size of the shirt is {size} and the text is {text}')
+
+def player_input(player: str) -> None:
+
+    player_choice = None
+
+    while player_choice not in choices:
+        player_choice = int(input(f"Player {player} Your choice: ")) # 1
+
+    print("Player chose:", player_choice)
+
+    choices[player_choice] = current_player # X/O
+
+    display_board(choices)
+
+def player_win(player: str): # X / O
+    
+    player_win = [player, player, player]
+
+    choices1 = choices[0:3] # first row
+    choices2 = choices[3:6] # second row
+    choices3 = choices[6:] # third row
+    
+    choices4 = choices[0::4] # first diagonal
+    choices5 = choices[2:7:2] # second diagonal
+
+    choices6 = choices[0:7:3]
+    choices7 = choices[1:8:3]
+    choices8 = choices[2::3]
+
+    if player_win == choices1 or player_win == choices2 or player_win == choices3 or player_win == choices4 or player_win == choices5 or player_win == choices6 or player_win == choices7 or player_win == choices8:
+        print(f'{player}: You win !!')
+        return True
+    else:
+        return None
+
+
+current_player = 'X'
+winner = None
+
+while winner == None:
+    player_input(current_player)
+    winner = player_win(current_player)
+    if winner:
+        break
+    current_player = switch_players(current_player)

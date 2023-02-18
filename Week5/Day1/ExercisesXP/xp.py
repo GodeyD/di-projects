@@ -60,42 +60,48 @@ stairway= Song(["There’s a lady who's sure","all that glitters is gold", "and 
 sing_me_a_song(stairway)
 
 # Exercise 4 : Afternoon At The Zoo
-
+import string
 class Zoo:
     def __init__(self, zoo_name= str):
         self.animals = []
-        self.name = zoo_name
-
-    def animal_list(self):
-            self.animals.append(new_value)
-            
-     
+        self.name = zoo_name 
     
-    # animal_list(self='perro',)
-    # def add_animal(animal_list, zoo):
-    #     if zoo not in zoo.animals:
-            
-gato = Zoo(zoo_name='gato') 
-print(gato.animal_list('gato'))  
-        
+    def add_animal(new_animal):
+        if new_animal not in new_animal.animals:
+            new_animal.animals.append(new_animal.name)
 
-# def get_animals(*animals):
-#     print(animals)
+    def get_animals(*animals):
+        print(animals)
 
-# def sell_animal(animal_sold):
-#     if animal_sold in animal_sold.animals:
-#         animal_sold.animals.remove(animal_sold)
+    def sell_animal(animal_sold):
+        if animal_sold in animal_sold.animals:
+            animal_sold.animals.remove(animal_sold)
 
+    def sort_animals(self):
+        order_animals = []
+        new_animmals = []
+        for i in range(0, len(string.ascii_letters)):
+            globals()['animal_first_letter%s' % i] = []
+            for word in self.animals:
+                if word[0] == string.ascii_letters[i]:
+                    globals()['animal_first_letter%s' % i].append(word)        
+            order_animals.append(globals()['animal_first_letter%s' % i]) 
+        new_animmals.append([x for x in order_animals if x])
+        new_animmals_dict = {}
+        for i, item in enumerate(new_animmals[0]):
+            new_animmals_dict[i+1] = item
+        return new_animmals_dict 
 
+    def get_groups(self):
+        for group in self.sort_animals():
+            print(group)
 
-# new_dog = Zoo(animal='perro' zoo_name='fido')
-# new_cat = Zoo(zoo_name='cat')
-# add_animal(new_dog)
-# add_animal(new_cat)
+ramat_gan_safari =  Zoo('zookeeper')
+new_dog = Zoo(zoo_name='perro')
+new_cat = Zoo(zoo_name='gato')
 
-# print(Zoo.animals)
-
-# def sort_animals(x):
-#     animals_sort = {}
-#     for i, x in enumerate(sorted(x.animals)):
-#         if x[0] 
+ramat_gan_safari.add_animal()
+ramat_gan_safari.get_animals()
+ramat_gan_safari.sell_animal()
+ramat_gan_safari.sort_animals()
+ramat_gan_safari.get_groups()

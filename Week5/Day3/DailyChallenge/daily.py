@@ -36,5 +36,3 @@ print(circle1 > circle2)
 print(circle1 == circle2)
 circles = [circle3, circle1, circle2]
 circles.sort()
-
-

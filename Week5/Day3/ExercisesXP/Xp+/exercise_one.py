@@ -1,6 +1,6 @@
 # 🌟 Exercise 1: Import
-# from func import sum_two_numbers
-# sum_two_numbers(1, 2)
+from func import sum_two_numbers
+sum_two_numbers(1, 2)
 
 # 🌟 Exercise 3: String Module
 import random
@@ -85,7 +85,7 @@ def old_in_seconds(sec):
 old_in_seconds(1000000000)
 
 # Exercise 9 : Faker Module
-# import faker
+# from faker import faker
 # fake = Faker()
 
 # i have problems to import faker

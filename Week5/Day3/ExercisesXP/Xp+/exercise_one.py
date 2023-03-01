@@ -1,3 +1,5 @@
+from faker import Faker
+
 # 🌟 Exercise 1: Import
 from func import sum_two_numbers
 sum_two_numbers(1, 2)
@@ -85,7 +87,15 @@ def old_in_seconds(sec):
 old_in_seconds(1000000000)
 
 # Exercise 9 : Faker Module
-# from faker import faker
-# fake = Faker()
 
-# i have problems to import faker
+fake = Faker()
+
+users = []
+
+def fake_users():
+    for _ in range(5):
+        new_user = {'name': fake.name(), 'adress': fake.address(), 'langage_code': fake.language_code()}
+        users.append(new_user)
+
+fake_users()
+print(users)
